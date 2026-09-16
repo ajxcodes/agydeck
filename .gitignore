@@ -16,8 +16,9 @@ out/
 build/
 */build/
 
-# Gradle files
+# Gradle and Kotlin files
 .gradle/
+.kotlin/
 buildOutputCleanup/
 
 # Android Studio / IntelliJ IDEA
@@ -78,3 +79,8 @@ Thumbs.db
 # Environment Variables
 .env
 .env.local
+
+# Antigravity Persistent Plans & Local State
+artifacts/plans/
+.worktrees/
+.agyloop/

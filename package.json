@@ -1,0 +1,13 @@
+{
+  "name": "agydeck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cross-platform client and orchestration deck for Google Antigravity",
+  "scripts": {
+    "test": "./gradlew test",
+    "detekt": "./gradlew detekt",
+    "build": "./gradlew build"
+  },
+  "author": "Alvin Jorrel Pascual <me@ajx.codes>",
+  "license": "Apache-2.0"
+}
