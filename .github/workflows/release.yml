@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: read
+  issues: read
+
+jobs:
+  release:
+    name: Auto-Tag Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Auto-Tag
+        uses: ajxcodes/auto-tag@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          default-bump: patch
+          tag-prefix: v
+          create-release: 'true'
+          package-json: 'true'
